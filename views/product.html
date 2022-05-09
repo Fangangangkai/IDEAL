@@ -1,0 +1,289 @@
+{{extend './layout/layout.html'}}
+
+{{block "head"}}
+<title>产品中心</title>
+<style>
+    * {
+        padding: 0;
+        margin: 0;
+    }
+
+    img {
+        width: 100%;
+        height: 100%;
+    }
+
+    .series {
+        background: url(../public/img/product_series_bg.jpg);
+    }
+
+    .series .series_title {
+        margin: 50px 0;
+    }
+
+    .series .series_title p {
+        text-align: center;
+        font-size: 26px;
+    }
+
+    .series .series_product {
+        margin: 50px 0;
+    }
+
+    .series .series_product .series_product_left {
+        width: 220px;
+    }
+
+    .series .series_product .series_product_left li {
+        width: 220px;
+        text-align: center;
+        font-size: 16px;
+        padding: 0;
+    }
+
+    .series .series_product .series_product_left li a {
+        color: #222222;
+    }
+
+    .series .series_product .series_product_left .navbar-nav>li>a {
+        height: 60px;
+        line-height: 30px;
+    }
+
+    .series .series_product .series_product_left .navbar-nav>li>a:hover,
+    .series .series_product .series_product_left .navbar-nav>li>a:focus {
+        color: white;
+        background-color: rgb(30, 80, 170);
+    }
+
+    .series .series_product .series_product_left .navbar-nav>.active>a,
+    .series .series_product .series_product_left .navbar-nav>.active>a:hover,
+    .series .series_product .series_product_left .navbar-nav>.active>a:focus {
+        color: white;
+        background-color: rgb(30, 80, 170);
+    }
+
+    .series .series_product .series_product_left .navbar-nav>.disabled>a,
+    .series .series_product .series_product_left .navbar-nav>.disabled>a:hover,
+    .series .series_product .series_product_left .navbar-nav>.disabled>a:focus {
+        background-color: rgb(30, 80, 170);
+    }
+
+    .series .series_product .series_product_right .tab-content {
+        background-color: white;
+        padding: 20px 40px;
+    }
+
+    .series .series_product .series_product_right li a {
+        padding: 0;
+        color: #222222;
+    }
+
+    .series .series_product .series_product_right li a:hover {
+        background-color: transparent;
+    }
+
+    .series .series_product .series_product_right img {
+        width: 260px;
+        height: 170px;
+    }
+
+    .series .series_product .series_product_right p {
+        text-align: center;
+    }
+
+    /* 循环 */
+    .display_f {
+        width: 100%;
+        height: 200px;
+        margin: 100px auto;
+        background-color: yellow;
+        overflow: hidden;
+    }
+
+    .display_f ul {
+        width: 400%;
+        list-style: none;
+        height: 100%;
+        animation: translateUL 5.0s linear 0s infinite;
+    }
+
+    .display_f>ul>li {
+        width: 300px;
+        float: left;
+    }
+
+    .display_f>ul>li>img {
+        width: 100%;
+        padding: 0 15px;
+    }
+
+    .display_f:hover>ul {
+        cursor: pointer;
+        animation-play-state: paused;
+    }
+
+    @keyframes translateUL {
+        form {
+            transform: translateX(0px);
+        }
+
+        to {
+            transform: translateX(-2280px);
+        }
+    }
+</style>
+
+{{/block}}
+
+{{block "content"}}
+<section class="banner">
+    <div class="container-fluid" style="padding: 0;">
+        <div class="project_banner">
+            <img src="/public/img/product_banner.jpg" alt="">
+        </div>
+    </div>
+</section>
+
+<section class="series">
+    <div class="container">
+        <div class="series_title">
+            <p>全系列产品符合您的需求</p>
+        </div>
+        <div class="series_product">
+            <div class="row">
+                <div class="series_product_left col-md-2 col-sm-4">
+                    <!-- <div class="container-fluid"> -->
+                    <ul class="nav navbar-nav">
+                        <li>
+                            <a href="#HPG型抛丸机" data-toggle="tab"><span>HPG型抛丸机</span></a>
+                        </li>
+                        <li>
+                            <a href="#JPG型抛丸机" data-toggle="tab"><span>JPG型抛丸机</span></a>
+                        </li>
+                        <li>
+                            <a href="#钢材预处理线" data-toggle="tab"><span>钢材预处理线</span></a>
+                        </li>
+                        <li>
+                            <a href="#焊割烟尘" data-toggle="tab"><span>焊割烟尘</span></a>
+                        </li>
+                        <li>
+                            <a href="#抛丸效果" data-toggle="tab"><span>抛丸效果</span></a>
+                        </li>
+                        <li>
+                            <a href="#外贸抛丸机" data-toggle="tab"><span>外贸抛丸机</span></a>
+                        </li>
+                        <li>
+                            <a href="#喷漆房" data-toggle="tab"><span>喷漆房</span></a>
+                        </li>
+                        <li>
+                            <a href="#喷砂房" data-toggle="tab"><span>喷砂房</span></a>
+                        </li>
+
+                        <li>
+                            <a href="#培训" data-toggle="tab"><span>培训</span></a>
+                        </li>
+                    </ul>
+                    <!-- </div> -->
+                </div>
+                <div class="series_product_right col-md-9 col-sm-8">
+                    <div class="tab-content">
+                        <div class="tab-pane active" id="HPG型抛丸机">
+                            <div class="row">
+                                <div class="col-xs-12 col-sm-6 col-md-4">
+                                    <a href="#">
+                                        <img src="../public/img/product_HPG型抛丸机_1.png" alt="">
+                                    </a>
+                                    <a href="#">
+                                        <p>HPG型抛丸机</p>
+                                    </a>
+                                </div>
+                                <div class="col-xs-12 col-sm-6 col-md-4">
+                                    <a href="#">
+                                        <img src="../public/img/product_HPG型抛丸机_1.png" alt="">
+                                    </a>
+                                    <a href="#">
+                                        <p>HPG型抛丸机</p>
+                                    </a>
+                                </div>
+                                <div class="col-xs-12 col-sm-6 col-md-4">
+                                    <a href="#">
+                                        <img src="../public/img/product_HPG型抛丸机_1.png" alt="">
+                                    </a>
+                                    <a href="#">
+                                        <p>HPG型抛丸机</p>
+                                    </a>
+                                </div>
+                                <div class="col-xs-12 col-sm-6 col-md-4">
+                                    <a href="#">
+                                        <img src="../public/img/product_HPG型抛丸机_1.png" alt="">
+                                    </a>
+                                    <a href="#">
+                                        <p>HPG型抛丸机</p>
+                                    </a>
+                                </div>
+                                <div class="col-xs-12 col-sm-6 col-md-4">
+                                    <a href="#">
+                                        <img src="../public/img/product_HPG型抛丸机_1.png" alt="">
+                                    </a>
+                                    <a href="#">
+                                        <p>HPG型抛丸机</p>
+                                    </a>
+                                </div>
+                                <div class="col-xs-12 col-sm-6 col-md-4">
+                                    <a href="#">
+                                        <img src="../public/img/product_HPG型抛丸机_1.png" alt="">
+                                    </a>
+                                    <a href="#">
+                                        <p>HPG型抛丸机</p>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane" id="JPG型抛丸机">2</div>
+                        <div class="tab-pane" id="钢材预处理线">3</div>
+                        <div class="tab-pane" id="焊割烟尘">4</div>
+                        <div class="tab-pane" id="抛丸效果">5</div>
+                        <div class="tab-pane" id="外贸抛丸机">6</div>
+                        <div class="tab-pane" id="喷漆房">7</div>
+                        <div class="tab-pane" id="喷砂房">8</div>
+                        <div class="tab-pane" id="培训">9</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="display">
+    <div class="container">
+        <div class="display_f">
+            <ul>
+                <li><img src="../public/img/product_display_01.webp" alt=""></li>
+                <li><img src="../public/img/product_display_02.webp" alt=""></li>
+                <li><img src="../public/img/product_display_03.webp" alt=""></li>
+                <li><img src="../public/img/product_display_04.webp" alt=""></li>
+                <li><img src="../public/img/product_display_05.webp" alt=""></li>
+                <!-- <li><img src="../public/img/product_display_06.webp" alt=""></li> -->
+                <!-- <li><img src="../public/img/product_display_07.webp" alt=""></li> -->
+                <li><img src="../public/img/product_display_01.webp" alt=""></li>
+                <li><img src="../public/img/product_display_02.webp" alt=""></li>
+                <li><img src="../public/img/product_display_03.webp" alt=""></li>
+                <li><img src="../public/img/product_display_04.webp" alt=""></li>
+                <li><img src="../public/img/product_display_05.webp" alt=""></li>
+                <!-- <li><img src="../public/img/product_display_06.webp" alt=""></li> -->
+                <!-- <li><img src="../public/img/product_display_07.webp" alt=""></li> -->
+            </ul>
+        </div>
+
+    </div>
+</section>
+{{/block}}
+
+
+{{block "script"}}
+<script>
+    console.log("生效了");
+
+</script>
+{{/block}}

@@ -1,0 +1,268 @@
+{{extend './layout/layout.html'}}
+
+{{block "head"}}
+<title>资质荣誉</title>
+<style>
+    img {
+        width: 100%;
+        height: 100%;
+    }
+
+    .honor .honor_title {
+        margin: 50px 0;
+    }
+
+    .honor .honor_title p {
+        text-align: center;
+        font-size: 26px;
+    }
+</style>
+<style>
+    /* .honor .navtabsparents {
+        margin: 0 auto;
+        text-align: center;
+    } */
+
+    .honor .nav-tabs {
+        border-bottom: 1px solid rgb(30, 80, 170);
+        margin: 0 auto;
+    }
+
+    .honor .nav-tabs>li {
+        float: left;
+        margin-bottom: -1px;
+    }
+
+    .honor .nav-tabs>li>a {
+        margin-right: 2px;
+        line-height: 1.42857143;
+        border: 1px solid transparent;
+        border-radius: 0;
+        color: rgb(102, 102, 102)
+    }
+
+    .honor .nav-tabs>li>a:hover {
+        color: white;
+        background-color: rgb(30, 80, 170);
+        border: 1px solid rgb(30, 80, 170);
+    }
+
+    .honor .nav-tabs>li>a:hover,
+    .honor .nav-tabs>li>a:focus {
+        background-color: transparent;
+    }
+
+    .honor .nav-tabs>li.active>a,
+    .honor .nav-tabs>li.active>a:hover,
+    .honor .nav-tabs>li.active>a:focus {
+        color: white;
+        cursor: default;
+        background-color: rgb(30, 80, 170);
+        border: 1px solid rgb(30, 80, 170);
+        border-bottom-color: transparent;
+    }
+
+    .honor .nav-tabs.nav-justified {
+        width: 100%;
+        border-bottom: 0;
+    }
+
+    .honor .nav-tabs.nav-justified>li {
+        float: none;
+    }
+
+    .honor .nav-tabs.nav-justified>li>a {
+        margin-bottom: 5px;
+        text-align: center;
+    }
+
+    .honor .nav-tabs.nav-justified>.dropdown .dropdown-menu {
+        top: auto;
+        left: auto;
+    }
+
+    @media (min-width: 768px) {
+        .honor .nav-tabs.nav-justified>li {
+            display: table-cell;
+            width: 1%;
+        }
+
+        .honor .nav-tabs.nav-justified>li>a {
+            margin-bottom: 0;
+        }
+    }
+
+    .honor .nav-tabs.nav-justified>li>a {
+        margin-right: 0;
+        border-radius: 4px;
+    }
+
+    .honor .nav-tabs.nav-justified>.active>a,
+    .honor .nav-tabs.nav-justified>.active>a:hover,
+    .honor .nav-tabs.nav-justified>.active>a:focus {
+        border: 1px solid rgb(30, 80, 170);
+    }
+
+    @media (min-width: 768px) {
+        .honor .nav-tabs.nav-justified>li>a {
+            border-bottom: 1px solid rgb(30, 80, 170);
+            border-radius: 4px 4px 0 0;
+        }
+
+        .honor .nav-tabs.nav-justified>.active>a,
+        .honor .nav-tabs.nav-justified>.active>a:hover,
+        .honor .nav-tabs.nav-justified>.active>a:focus {
+            border-bottom-color: rgb(30, 80, 170);
+        }
+    }
+
+    .honor .honor_img {
+        padding-bottom: 30px;
+    }
+
+    .honor .honor_img .tab-content {
+        height: 710px;
+    }
+
+    .honor .honor_img img {
+        width: 260px;
+        padding: 10px 0;
+    }
+
+    .honor .honor_img p {
+        text-align: center;
+        margin: 0;
+    }
+</style>
+{{/block}}
+
+{{block "content"}}
+<section class="banner">
+    <div class="container-fluid" style="padding: 0;">
+        <div class="project_banner">
+            <img src="/public/img/honor_banner.jpg" alt="">
+        </div>
+    </div>
+</section>
+<section class="honor">
+    <div class="container">
+        <div class="honor_title">
+            <p>全系列产品符合您的需求</p>
+        </div>
+        <div class="honor_img">
+            <!-- <div class="navtabsparents"> -->
+            <ul class="nav nav-tabs title">
+                <li>
+                    <a href="#证书" data-toggle="tab">证书</a>
+                </li>
+                <li>
+                    <a href="#企业荣誉" data-toggle="tab">企业荣誉</a>
+                </li>
+                <li>
+                    <a href="#质量证书" data-toggle="tab">质量证书</a>
+                </li>
+            </ul>
+            <!-- </div> -->
+            <div class="tab-content">
+                <div class="tab-pane active contentlist" id="证书">
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-6 col-md-3">
+                            <img src="/public/img/honor_img_1.webp" alt="">
+                        </div>
+                        <div class="col-xs-12 col-sm-6 col-md-3">
+                            <img src="/public/img/honor_img_1.webp" alt="">
+                        </div>
+                        <div class="col-xs-12 col-sm-6 col-md-3">
+                            <img src="/public/img/honor_img_1.webp" alt="">
+                        </div>
+                        <div class="col-xs-12 col-sm-6 col-md-3">
+                            <img src="/public/img/honor_img_1.webp" alt="">
+                        </div>
+                        <div class="col-xs-12 col-sm-6 col-md-3">
+                            <img src="/public/img/honor_img_1.webp" alt="">
+                        </div>
+                        <div class="col-xs-12 col-sm-6 col-md-3">
+                            <img src="/public/img/honor_img_1.webp" alt="">
+                        </div>
+                        <div class="col-xs-12 col-sm-6 col-md-3">
+                            <img src="/public/img/honor_img_1.webp" alt="">
+                        </div>
+                        <div class="col-xs-12 col-sm-6 col-md-3">
+                            <img src="/public/img/honor_img_1.webp" alt="">
+                        </div>
+                        <div class="col-xs-12 col-sm-6 col-md-3">
+                            <img src="/public/img/honor_img_1.webp" alt="">
+                        </div>
+                        <div class="col-xs-12 col-sm-6 col-md-3">
+                            <img src="/public/img/honor_img_1.webp" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane contentlist" id="企业荣誉">
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-6 col-md-3">
+                            <img src="/public/img/honor_img_2.webp" alt="">
+                            <p>无锡市AAA级重合同守信用企业</p>
+                        </div>
+                        <div class="col-xs-12 col-sm-6 col-md-3">
+                            <img src="/public/img/honor_img_2.webp" alt="">
+                            <p>无锡市AAA级重合同守信用企业</p>
+                        </div>
+                        <div class="col-xs-12 col-sm-6 col-md-3">
+                            <img src="/public/img/honor_img_2.webp" alt="">
+                            <p>无锡市AAA级重合同守信用企业</p>
+                        </div>
+                        <div class="col-xs-12 col-sm-6 col-md-3">
+                            <img src="/public/img/honor_img_2.webp" alt="">
+                            <p>无锡市AAA级重合同守信用企业</p>
+                        </div>
+                        <div class="col-xs-12 col-sm-6 col-md-3">
+                            <img src="/public/img/honor_img_2.webp" alt="">
+                            <p>无锡市AAA级重合同守信用企业</p>
+                        </div>
+                        <div class="col-xs-12 col-sm-6 col-md-3">
+                            <img src="/public/img/honor_img_2.webp" alt="">
+                            <p>无锡市AAA级重合同守信用企业</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane contentlist" id="质量证书">
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-6 col-md-3">
+                            <img src="/public/img/honor_img_1.webp" alt="">
+                            <p>质量管理体系认证证书</p>
+                        </div>
+                        <div class="col-xs-12 col-sm-6 col-md-3">
+                            <img src="/public/img/honor_img_1.webp" alt="">
+                            <p>质量管理体系认证证书</p>
+                        </div>
+                        <div class="col-xs-12 col-sm-6 col-md-3">
+                            <img src="/public/img/honor_img_1.webp" alt="">
+                            <p>质量管理体系认证证书</p>
+                        </div>
+                        <div class="col-xs-12 col-sm-6 col-md-3">
+                            <img src="/public/img/honor_img_1.webp" alt="">
+                            <p>质量管理体系认证证书</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{{/block}}
+
+
+{{block "script"}}
+<script>
+    $(function () {
+        // tab选项卡悬停
+        $(".title li").hover(function () {
+            // 标题悬停
+            var index = $(this).index();  // 获得当前点击标题的下标
+            $(this).addClass("active").siblings().removeClass("active"); // 给当前选项添加选中，其他移除选中
+            $(".tab-content .contentlist").eq(index).show().siblings().hide();  // 对应下标的内容框显示，其他隐藏
+        });
+    })
+</script>
+{{/block}}
