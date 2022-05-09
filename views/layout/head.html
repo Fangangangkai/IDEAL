@@ -1,0 +1,179 @@
+<style>
+    /* 顶部 */
+    .logo {
+        float: left;
+    }
+
+    .logo::after {
+        content: '';
+        height: 80%;
+        border: 1px solid #ddd;
+        position: absolute;
+        left: 100px;
+        top: 15px;
+        float: left;
+    }
+
+    .logo img {
+        width: 80px;
+        height: 80px;
+    }
+
+    .titleCompany {
+        float: left;
+        margin: 10px 0;
+        font-size: 24px;
+    }
+
+    @media (max-width: 768px) {
+        .titleCompany {
+            padding-top: 10px;
+            font-size: 20px;
+        }
+    }
+
+    .telephone {
+        margin: 30px 5px;
+    }
+
+    .telephone img {
+        width: 40px;
+        height: 40px;
+    }
+
+    .fuwurexian {
+        display: inline-block;
+        width: 100px;
+        margin: 30px 0px 0px 0px;
+
+    }
+
+    /* 导航栏 */
+    .navbar_box {
+        background-color: rgb(36, 80, 174);
+        /* height: 80px; */
+        /* position: relative; */
+    }
+
+    /* .navbar {
+        background-color: #fff;
+        border-color: #e7e7e7;
+        height: 80px;
+        position: absolute;
+        width: 100%;
+        left: 0px;
+        top: 0px;
+        z-index: 99;
+        border: 0;
+    } */
+
+    .navbar_box .navbar-toggle {
+        border-color: #ddd;
+        /* margin-top: 25px; */
+    }
+
+    .navbar_box .navbar-toggle:hover,
+    .navbar_box .navbar-toggle:focus {
+        background-color: #ddd;
+    }
+
+    .navbar_box .navbar-toggle .icon-bar {
+        background-color: white;
+    }
+
+    .navbar_box .navbar-nav li {
+        width: 110px;
+        height: 50px;
+        text-align: center;
+        margin: 0 22px;
+    }
+
+    .navbar_box .navbar-nav li a {
+        color: white;
+        font-size: 16px;
+    }
+
+    .nav>li>a:hover,
+    .nav>li>a:focus {
+        background-color: transparent;
+    }
+
+    .navbar_box .navbar-nav>.active>a,
+    .navbar_box .navbar-nav>.active>a:hover,
+    .navbar_box .navbar-nav>.active>a:focus {
+        background-color: rgb(18, 67, 157);
+    }
+
+    .navbar_box .navbar-nav li a:hover {
+        background-color: rgb(18, 67, 157);
+    }
+
+    .navbar_box .navbar-nav li span {
+        width: 60px;
+    }
+</style>
+
+<!-- 顶部 -->
+<header class="title">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-1">
+                <div class="logo">
+                    <img src="/public/img/logo.png" alt="">
+                </div>
+            </div>
+            <div class="col-md-9">
+                <ul class="nav navbar-nav">
+                    <div class="titleCompany_p">
+                        <div class="titleCompany">无锡艾迪尔机械制造有限公司</div>
+                        <div class="hidden-xs">
+                            <span style="font-size: 18px;color: rgb(7, 53, 131);">除
+                                &nbsp;锈 &nbsp;涂 &nbsp;装 &nbsp;设 &nbsp;备 &nbsp;专 &nbsp;业 &nbsp;生 &nbsp;产
+                                &nbsp;商</span>
+                        </div>
+                    </div>
+                </ul>
+            </div>
+            <div class="col-md-1 hidden-xs">
+                <ul class="nav navbar-nav">
+                    <div class="telephone">
+                        <img src="/public/img/telephone.png" alt="">
+                    </div>
+                </ul>
+            </div>
+            <div class="col-md-1 hidden-xs">
+                <ul class="nav navbar-nav">
+                    <div class="fuwurexian">服务热线</div>
+                    <p><b>13921132220</b></p>
+                </ul>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- 导航栏 -->
+<div class="navbar_box">
+    <nav class="navbar" style="margin-bottom: 0px;">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                    data-target="#bs-example-navbar-collapse-1">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+            </div>
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="#">首页</a></li>
+                    <li><a href="#">关于我们</a></li>
+                    <li><a href="#">产品中心</a></li>
+                    <li><a href="#">新闻资讯</a></li>
+                    <li><a href="#">咨询荣誉</a></li>
+                    <li><a href="#">在线留言</a></li>
+                    <li><a href="#">联系我们</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</div>

@@ -1,0 +1,167 @@
+<style>
+    footer {
+        height: 330px;
+        background-color: rgb(26, 73, 131);
+    }
+
+    footer .info-child1 li:nth-child(1) {
+        width: 100px;
+        margin: 20px 0px 20px -30px;
+    }
+
+    footer .info-child1 li {
+        width: 100px;
+        margin: 20px 0px 20px 10px;
+    }
+
+    footer .info-child1 li a {
+        color: white;
+    }
+
+    footer .info2 {
+        position: relative;
+        height: 70px;
+    }
+
+    .info2 span {
+        font-size: 30px;
+        color: white;
+    }
+
+    footer .info2 .info-child2 {
+        position: absolute;
+        right: 0px;
+        top: -40px;
+    }
+
+    footer .info2 img {
+        width: 100px;
+        height: 100px;
+    }
+
+    footer .info2 .info-child2 p {
+        text-align: center;
+        color: #bbb;
+        margin-top: 5px;
+    }
+
+    footer .info3 {
+        height: 50px;
+        margin: 30px auto;
+        position: relative;
+    }
+
+    footer .info-child3 {
+        margin: 0 60px;
+    }
+
+    footer .info-child3 li {
+        width: 250px;
+        color: white;
+    }
+
+    footer .info4 {
+        position: relative;
+    }
+
+    footer .info4 p {
+        margin: 0;
+        color: #bbb;
+    }
+
+    footer .info5 {
+        text-align: center;
+        position: relative;
+    }
+
+    footer .info5 a {
+        color: rgb(87, 87, 87);
+        text-decoration: none;
+    }
+
+    footer .info5 a:hover {
+        color: white;
+    }
+
+    @media (max-width: 768px) {
+        footer .info2 span {
+            font-size: 20px;
+            position: absolute;
+            top: 50px;
+        }
+
+        footer .info2 .info-child2 {
+            position: absolute;
+            right: 0px;
+            top: 100px;
+        }
+
+        footer .info2 img {
+            width: 80px;
+            height: 80px;
+        }
+
+        footer .info3 .info-child3 {
+            width: 100px;
+            margin: 0px;
+            position: absolute;
+            /* right: 0px; */
+            top: 10px;
+        }
+
+        footer .info4 p {
+            position: absolute;
+            top: 70px;
+            margin: 0 auto;
+            padding-left: 30px;
+        }
+
+        footer .info5 a {
+            color: rgb(87, 87, 87);
+            text-decoration: none;
+            position: absolute;
+            top: 100px;
+            left: 100px;
+        }
+    }
+</style>
+<!-- 底部 -->
+<footer>
+    <div class="container">
+        <div>
+            <div class="collapse navbar-collapse id=bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav info-child1 hidden-sm">
+                    <li class="active"><a href="#">首页</a></li>
+                    <li><a href="#">关于我们</a></li>
+                    <li><a href="#">产品中心</a></li>
+                    <li><a href="#">新闻资讯</a></li>
+                    <li><a href="#">咨询荣誉</a></li>
+                    <li><a href="#">在线留言</a></li>
+                    <li><a href="#">联系我们</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="info2">
+            <span>无锡艾迪尔机械制造有限公司</span>
+            <div class="info-child2">
+                <img src="/public/img/erweima.png" alt="">
+                <p>微信扫一扫</p>
+            </div>
+
+        </div>
+        <div class="info3">
+            <ul class="nav navbar-nav info-child3">
+                <li>联系邮箱：ideal_wx@163.com</li>
+                <li>电话:13921132220</li>
+                <li>传真:0510-88600020</li>
+                <li>地址:江苏省无锡市锡山区东港镇东湖村</li>
+            </ul>
+        </div>
+        <div class="info4">
+            <p>©2022 无锡艾迪尔机械制造有限公司 版权所有</p>
+        </div>
+        <div class="info5">
+            <a href="#">苏ICP备12019157号-1</a>
+        </div>
+    </div>
+</footer>
