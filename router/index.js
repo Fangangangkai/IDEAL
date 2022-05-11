@@ -12,11 +12,20 @@ router.get("/index", (req, res) => {
 router.get("/product", (req, res) => {
     res.render("product.html")
 })
+
 router.get("/honor", (req, res) => {
     res.render("honor.html")
 })
+
 router.get("/connection", (req, res) => {
     res.render("connection.html")
 })
 
+router.get("/product_news_1", (req, res) => {
+    res.render("product_news_1.html")
+})
+
+router.get("/test", (req, res) => {
+    res.render("test.html")
+})
 module.exports = router;

@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style type="text/css">
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        ul,
+        li {
+            list-style: none;
+        }
+
+        #warp {
+            width: 600px;
+            height: auto;
+            margin: 0 auto;
+            margin-top: 20px;
+        }
+
+        #warp .content p {
+            width: 300px;
+            height: 30px;
+            background-color: #000;
+            color: #fff;
+            line-height: 30px;
+            text-align: center;
+        }
+
+        #warp .content+.content {
+            margin-top: 2px;
+        }
+
+        #warp .content ul {
+            display: none;
+        }
+
+        #warp .content ul.on {
+            display: block;
+        }
+
+        #warp .content li {
+            background-color: #ccc;
+            width: 300px;
+            text-align: center;
+        }
+
+        #warp .content li+li {
+            margin-top: 1px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="warp">
+        <div class="content">
+            <p>动物</p>
+            <ul>
+                <li>猴子</li>
+                <li>大象</li>
+                <li>狮子</li>
+            </ul>
+        </div>
+        <div class="content">
+            <p>山川</p>
+            <ul>
+                <li>长江</li>
+                <li>黄河</li>
+                <li>井水</li>
+            </ul>
+        </div>
+        <div class="content">
+            <p>美女</p>
+            <ul>
+                <li>貂蝉</li>
+                <li>西施</li>
+                <li>秀秀</li>
+            </ul>
+        </div>
+    </div>
+    <script>
+        let oP = document.getElementsByTagName("p"),
+            aUl = document.getElementsByTagName("ul"),
+            index;
+        console.log(oP.length);
+        for (var i = 0; i < oP.length; i++) {
+            oP[i].index = i;
+            oP[i].onclick = function () {
+                index = this.index;
+                aUl[index].className = aUl[index].className === "" ? "on" : "";
+                console.log(i)
+            }
+        }
+
+
+    </script>
+</body>
+
+</html>
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .swipe {
+            overflow: hidden;
+            position: relative;
+        }
+
+        .swipe-wrap {
+            over-flow: hidder;
+            position: relative;
+        }
+
+        .swipe .swipe-wrap li {
+            position: relative;
+            float: left;
+        }
+    </style>
+</head>
+
+<body>
+    <section id="slider" class="swipe">
+        <ul class="swipe-wrap">
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+        </ul>
+    </section>
+    <script>
+        var slider = Swipe(document.getElementById('slider'));
+
+    </script>
+</body>
+
+</html>

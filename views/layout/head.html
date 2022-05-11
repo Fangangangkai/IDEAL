@@ -49,23 +49,27 @@
     }
 
     /* 导航栏 */
-    .navbar_box {
+    #bs-example-navbar-collapse-1 {
         background-color: rgb(36, 80, 174);
-        /* height: 80px; */
-        /* position: relative; */
     }
 
-    /* .navbar {
-        background-color: #fff;
+    .navbar_box {
+        background-color: rgb(36, 80, 174);
+        height: 50px;
+        position: relative;
+    }
+
+    .navbar {
+        background-color: rgb(36, 80, 174);
         border-color: #e7e7e7;
-        height: 80px;
+        height: 50px;
         position: absolute;
         width: 100%;
         left: 0px;
         top: 0px;
         z-index: 99;
         border: 0;
-    } */
+    }
 
     .navbar_box .navbar-toggle {
         border-color: #ddd;
@@ -104,6 +108,36 @@
         background-color: rgb(18, 67, 157);
     }
 
+    @media (max-width: 767px) {
+        .navbar {
+            background-color: rgb(36, 80, 174);
+        }
+
+        .navbar-nav .open .dropdown-menu>li>a {
+            color: #777;
+        }
+
+        .navbar-nav .open .dropdown-menu>li>a:hover,
+        .navbar-nav .open .dropdown-menu>li>a:focus {
+            color: #333;
+            background-color: rgb(18, 67, 157);
+        }
+
+        .navbar-nav .open .dropdown-menu>.active>a,
+        .navbar-nav .open .dropdown-menu>.active>a:hover,
+        .navbar-nav .open .dropdown-menu>.active>a:focus {
+            color: #555;
+            background-color: rgb(18, 67, 157);
+        }
+
+        .navbar-nav .open .dropdown-menu>.disabled>a,
+        .navbar-nav .open .dropdown-menu>.disabled>a:hover,
+        .navbar-nav .open .dropdown-menu>.disabled>a:focus {
+            color: #ccc;
+            background-color: (36, 80, 174);
+        }
+    }
+
     .navbar_box .navbar-nav li a:hover {
         background-color: rgb(18, 67, 157);
     }
@@ -111,10 +145,65 @@
     .navbar_box .navbar-nav li span {
         width: 60px;
     }
+
+    .to-top {
+        width: 50px;
+        height: 50px;
+        border-radius: 5px;
+        cursor: pointer;
+        display: none;
+        position: fixed;
+        bottom: 50px;
+        right: 25px;
+        z-index: 99;
+    }
+
+    .to-top:hover {
+        animation: fadenum 1s forwards;
+    }
+
+    @keyframes fadenum {
+        from {
+            opacity: 1;
+        }
+
+        to {
+            opacity: 0.5;
+        }
+    }
+
+    @media (max-width: 767px) {
+        .to-top {
+            width: 25px;
+            height: 25px;
+            border-radius: 5px;
+            cursor: pointer;
+            display: none;
+            position: fixed;
+            bottom: 50px;
+            right: 25px;
+            z-index: 99;
+        }
+
+        .to-top:hover {
+            animation: fadenum 1s forwards;
+
+        }
+
+        @keyframes fadenum {
+            from {
+                opacity: 1;
+            }
+
+            to {
+                opacity: 0.5;
+            }
+        }
+    }
 </style>
 
 <!-- 顶部 -->
-<header class="title">
+<header class="title" id="top">
     <div class="container">
         <div class="row">
             <div class="col-md-1">
@@ -177,3 +266,38 @@
         </div>
     </nav>
 </div>
+
+<!-- 回到顶部 -->
+<div class="to-top" id="totop">
+    <img src="../../public/img/head_totop.png" alt="">
+</div>
+
+<script>
+    var oDiv = document.getElementById('totop');
+    window.onscroll = function () {
+        oDiv.style.display = 'block';
+        var height = document.documentElement.scrollTop || document.body.scrollTop;
+        console.log(height);
+        if (height == 0) {
+            oDiv.style.display = 'none';
+        }
+    }
+    oDiv.onclick = function () {
+        var height = document.documentElement.scrollTop || document.body.scrollTop;
+        var t = setInterval(() => {
+            height -= 50;
+            if (height > 0) {
+                window.scrollTo(0, height);
+            } else {
+                window.scrollTo(0, 0);
+                clearInterval(t);
+            }
+        }, 10);
+    }
+    oDiv.onclick = function () {
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth"
+        })
+    }
+</script>

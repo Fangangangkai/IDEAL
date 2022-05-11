@@ -1,13 +1,13 @@
 {{extend './layout/layout.html'}}
-
 {{block "head"}}
 <title>联系我们</title>
 <style>
-  img {
-    width: 100%;
-    height: 100%;
+  * {
+    padding: 0;
+    margin: 0;
   }
 
+  /* banner */
   .connect_fk_banner {
     width: 100%;
     height: 300px;
@@ -16,51 +16,395 @@
     background-position: -50px;
   }
 </style>
-{{/block}}
 
+<!-- 联系我们 -->
+<style>
+  .contact_us .contact_us_info .img_f {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .contact_us .contact_us_info img {
+    width: 29px;
+    height: 29px;
+    margin-bottom: 30px;
+  }
+
+  .contact_us .contact_us_info p {
+    text-align: center;
+  }
+</style>
+
+<!-- fullmeasure -->
+<style>
+  .connect_fullmeasure>.container {
+    width: 900px;
+  }
+
+  .container .lxwm {
+    padding-top: 25px;
+    padding-bottom: 25px;
+  }
+
+  .container .fuwu {
+    padding-bottom: 50px;
+  }
+
+  .container img {
+    font-size: 12px;
+  }
+
+  @media (min-width: 768px) and (max-width: 992px) {
+    .connect_fullmeasure>.container {
+      width: 750px;
+    }
+  }
+
+  .container .fabiao {
+    padding-top: 50px;
+    padding-bottom: 30px;
+    ;
+  }
+</style>
+
+<!-- 地图样式 -->
+<style>
+  body {
+    margin: 0;
+    font: 13px/1.5 "Microsoft YaHei", "Helvetica Neue", "Sans-Serif";
+    min-height: 960px;
+    min-width: 600px;
+  }
+
+  .my-map {
+    margin: 0 auto;
+    width: 1200px;
+    height: 600px;
+  }
+
+  .my-map .icon {
+    background: url(//a.amap.com/lbs-dev-yuntu/static/web/image/tools/creater/marker.png) no-repeat;
+  }
+
+  .my-map .icon-cir {
+    height: 31px;
+    width: 28px;
+  }
+
+  .my-map .icon-cir-red {
+    background-position: -11px -5px;
+  }
+
+  .my-map .icon-cir {
+    height: 31px;
+    width: 28px;
+  }
+
+  .my-map .icon-cir-red {
+    background-position: -11px -5px;
+  }
+
+  .amap-container {
+    height: 100%;
+  }
+
+  .myinfowindow {
+    width: 240px;
+    min-height: 50px;
+  }
+
+  .myinfowindow h5 {
+    height: 20px;
+    line-height: 20px;
+    overflow: hidden;
+    font-size: 14px;
+    font-weight: bold;
+    width: 220px;
+    text-overflow: ellipsis;
+    word-break: break-all;
+    white-space: nowrap;
+  }
+
+  .myinfowindow div {
+    margin-top: 10px;
+    min-height: 40px;
+    line-height: 20px;
+    font-size: 13px;
+    color: #6f6f6f;
+  }
+
+  @media screen and (max-width: 500px) {
+    .my-map {
+      width: 100%;
+    }
+  }
+</style>
+
+{{/block}}
 {{block "content"}}
 <div class="connect_banner">
   <div class="connect_fk_banner">
-    <!-- <img src="../public/img/展示.jpg"> -->
+    <!-- <img src="../public/img/展示.jpg">  -->
   </div>
 </div>
-<div class="container">
-  <div> 联系我们</div>
-  <div> 以**的技术为客户提供高质量的产品；以诚信的态度为客户提供**的服务</div>
-  <div class="row">
-    <div class="col-md-3 col-sm-6">
-      <div>
-        <img src="../public/img/1.png.webp">
+
+<section class="contact_us">
+  <div class="container">
+    <div class="lxwm" style="text-align: center; font-size: 26px;">联系我们</div>
+    <div class="fuwu" style="text-align: center; font-size: 16px;">以**的技术为客户提供高质量的产品；以诚信的态度为客户提供**的服务</div>
+    <div class="contact_us_info">
+      <div class="row">
+        <div class="col-md-3 col-sm-6">
+          <div class="img_f">
+            <img src="../public/img/connection_img_01.webp" />
+          </div>
+          <p>电话</p>
+          <p>13861729821</p>
+          <p>13921132220</p>
+        </div>
+        <div class="col-md-3 col-sm-6">
+          <div class="img_f">
+            <img src="../public/img/connection_img_02.webp" />
+          </div>
+          <p>广告位</p>
+          <p>广告位</p>
+          <p>0510-88600020</p>
+        </div>
+        <div class="col-md-3 col-sm-6">
+          <div class="img_f">
+            <img src="../public/img/connection_img_03.webp" />
+          </div>
+          <p>联系邮箱</p>
+          <p>ideal_wx@163.com</p>
+        </div>
+        <div class="col-md-3 col-sm-6">
+          <div class="img_f">
+            <img src="../public/img/connection_img_04.webp" />
+          </div>
+          <p>联系地址</p>
+          <p>江苏省无锡市锡山区东港镇东湖村</p>
+        </div>
       </div>
-      <p>电话</p>
-      <p>13861729821</p>
-      <p>13921132220</p>
     </div>
-    <div class="col-md-3 col-sm-6">
-      <div>
-        <img src="../public/img/2.png.webp">
-      </div>
-      <p>传真</p>
-      <p>0510-88600020</p>
-    </div>
-    <div class="col-md-3 col-sm-6">
-      <div>
-        <img src="../public/img/3.png.webp">
-      </div>
-      <p>联系邮箱</p>
-      <p>ideal_wx@163.com</p>
-    </div>
-    <div class="col-md-3 col-sm-6">
-      <div>
-        <img src="../public/img/4.png.webp">
-      </div>
-      <p>联系地址</p>
-      <p>江苏省无锡市锡山区东港镇东湖村</p>
-    </div>
+
   </div>
+</section>
+
+<div id="wrap" class="my-map">
+  <div id="mapContainer"></div>
 </div>
+<script src="//webapi.amap.com/maps?v=1.3&key=e07ffdf58c8e8672037bef0d6cae7d4a"></script>
+<script>
+  !(function () {
+    var infoWindow,
+      map,
+      level = 18,
+      center = { lng: 120.5095, lat: 31.69011 },
+      features = [
+        // {
+        //   icon: "cir",
+        //   color: "red",
+        //   name: "未命名标注",
+        //   desc: "未命名标注描述",
+        //   lnglat: {
+        //     Q: 31.699119864579025,
+        //     R: 120.49533209994433,
+        //     lng: 120.495332,
+        //     lat: 31.69912,
+        //   },
+        //   offset: { x: -9, y: -31 },
+        //   type: "Marker",
+        // },
+        {
+          icon: "cir",
+          color: "red",
+          name: "无锡艾迪尔机械制造有限公司",
+          desc: "江苏省无锡市锡山区东港镇东湖村<br />电话：13921132220/13861729821",
+          lnglat: {
+            Q: 31.690109800063986,
+            R: 120.50949952259657,
+            lng: 120.5095,
+            lat: 31.69011,
+          },
+          offset: { x: -9, y: -31 },
+          type: "Marker",
+        },
+      ];
+
+    function loadFeatures() {
+      for (
+        var feature, data, i = 0, len = features.length, j, jl, path;
+        i < len;
+        i++
+      ) {
+        data = features[i];
+        switch (data.type) {
+          case "Marker":
+            feature = new AMap.Marker({
+              map: map,
+              position: new AMap.LngLat(data.lnglat.lng, data.lnglat.lat),
+              zIndex: 3,
+              extData: data,
+              offset: new AMap.Pixel(data.offset.x, data.offset.y),
+              title: data.name,
+              content:
+                '<div class="icon icon-' +
+                data.icon +
+                " icon-" +
+                data.icon +
+                "-" +
+                data.color +
+                '"></div>',
+            });
+            break;
+          case "Polyline":
+            for (j = 0, jl = data.path.length, path = []; j < jl; j++) {
+              path.push(new AMap.LngLat(data.path[j].lng, data.path[j].lat));
+            }
+            feature = new AMap.Polyline({
+              map: map,
+              path: path,
+              extData: data,
+              zIndex: 2,
+              strokeWeight: data.strokeWeight,
+              strokeColor: data.strokeColor,
+              strokeOpacity: data.strokeOpacity,
+            });
+            break;
+          case "Polygon":
+            for (j = 0, jl = data.path.length, path = []; j < jl; j++) {
+              path.push(new AMap.LngLat(data.path[j].lng, data.path[j].lat));
+            }
+            feature = new AMap.Polygon({
+              map: map,
+              path: path,
+              extData: data,
+              zIndex: 1,
+              strokeWeight: data.strokeWeight,
+              strokeColor: data.strokeColor,
+              strokeOpacity: data.strokeOpacity,
+              fillColor: data.fillColor,
+              fillOpacity: data.fillOpacity,
+            });
+            break;
+          default:
+            feature = null;
+        }
+        if (feature) {
+          AMap.event.addListener(feature, "click", mapFeatureClick);
+        }
+      }
+    }
+
+    function mapFeatureClick(e) {
+      if (!infoWindow) {
+        infoWindow = new AMap.InfoWindow({ autoMove: true, isCustom: false });
+      }
+      var extData = e.target.getExtData();
+      infoWindow.setContent(
+        "<div class='myinfowindow'><h5>" +
+        extData.name +
+        "</h5><div>" +
+        extData.desc +
+        "</div></div>"
+      );
+      infoWindow.open(map, e.lnglat);
+    }
+
+    map = new AMap.Map("mapContainer", {
+      center: new AMap.LngLat(center.lng, center.lat),
+      level: level,
+      keyboardEnable: true,
+      dragEnable: true,
+      scrollWheel: true,
+      doubleClickZoom: true,
+    });
+    new AMap.TileLayer.RoadNet({ map: map, zIndex: 2 });
+    loadFeatures();
+
+    map.on("complete", function () {
+      map.plugin(["AMap.ToolBar", "AMap.OverView", "AMap.Scale"], function () {
+        map.addControl(
+          new AMap.ToolBar({ ruler: true, direction: true, locate: false })
+        );
+        map.addControl(new AMap.OverView({ isOpen: true }));
+        map.addControl(new AMap.Scale());
+      });
+    });
+  })();
+</script>
+
+
+<style>
+  /* .message label */
+  .message {
+    margin-bottom: 100px;
+  }
+
+  .nbsp {
+    width: 50px;
+    height: 44px;
+    float: left;
+  }
+
+  .btn {
+    width: 234px;
+    height: 44px;
+    background-color: rgb(142, 142, 142);
+    border-radius: 0px;
+    color: white;
+    float: left;
+  }
+</style>
+<section class="message">
+  <div class="container">
+    <div class="fabiao">
+      <h4>发表您的留言：</h4>
+    </div>
+    <form class="form-inline">
+      <div class="row">
+        <div class="col-md-4 col-sm-6">
+          <!--form-group:给表单元素分组-->
+          <div class="form-group">
+            <label for="exampleInputName">姓名：</label>
+            <input type="text" class="form-control" id="exampleInputName" />
+          </div>
+        </div>
+        <div class="col-md-4 col-sm-6">
+          <div class="form-group">
+            <label for="exampleInputEmail">邮箱：</label>
+            <input type="email" class="form-control" id="exampleInputEmail" />
+          </div>
+        </div>
+        <div class="col-md-4 col-sm-6">
+          <div class="form-group">
+            <label for="exampleInputName">电话：</label>
+            <input type="text" class="form-control" id="exampleInputMobile" />
+          </div>
+        </div>
+        <div class="container">
+          <div class="form-group" style="margin-bottom: 30px;">
+            <label for="exampleInputneirong">内容：</label>
+            <!--form-control:表单控件-->
+            <textarea class="form-control" rows="3" id="exampleInputneirong" placeholder="留言需审核后才会显示"></textarea>
+          </div>
+          <div>
+            <div class="nbsp">&nbsp;</div>
+            <button type="submit" class="btn">提交留言</button>
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+</section>
+
+
 {{/block}}
 
-<!-- {{block "script"}} -->
-
-<!-- {{/block}} -->
+{{block "script"}}
+<script>
+  console.log("生效了");
+</script>
+{{/block}}

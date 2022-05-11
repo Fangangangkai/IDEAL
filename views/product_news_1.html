@@ -1,0 +1,198 @@
+{{extend './layout/layout.html'}}
+{{block "head"}}
+<style>
+  * {
+    padding: 0;
+    margin: 0;
+  }
+
+  img {
+    width: 100%;
+    height: 100%;
+  }
+</style>
+
+{{/block}}
+
+{{block "content"}}
+<section class="banner">
+  <div class="container-fluid" style="padding: 0;">
+    <div class="project_banner">
+      <img src="../public/img/product_news_1_bg.jpg" alt="">
+    </div>
+  </div>
+</section>
+<style>
+  .question {
+    margin: 50px 0;
+  }
+
+  .news_title p {
+    font-size: 25px;
+    color: #333;
+    text-align: left;
+  }
+
+  .newsInfoWrap {
+    margin: 30px 0;
+  }
+
+  .newsInfoWrap span {
+    font-size: 12px;
+    color: gray;
+  }
+
+  .line1 {
+    border: 1px solid #f0efef;
+    border-bottom: none;
+    margin: 20px 0;
+  }
+
+  .content ul {
+    color: #676767;
+    padding-left: 30px;
+  }
+
+  .content ul li {
+    list-style: none;
+    line-height: 1.8;
+  }
+
+  .line2 {
+    border: 1px solid #f0efef;
+    border-bottom: none;
+    margin: 20px 0;
+  }
+
+  .share {
+    position: relative;
+    height: 30px;
+  }
+
+  .share span {
+    position: absolute;
+    right: 200px;
+  }
+
+  .share .icon {
+    position: absolute;
+    right: 0px;
+    height: 23px;
+
+  }
+
+  .share .icon .weixin {
+    width: 26px;
+    height: 26px;
+    background-image: url(../public/img/share_icon.png);
+    position: absolute;
+    background-position: -23px 0;
+  }
+
+  .share .icon .sina_weibo {
+    width: 26px;
+    height: 26px;
+    background-image: url(../public/img/share_icon.png);
+    position: absolute;
+    left: 23px;
+    background-position: -48px 0;
+  }
+
+  .share .icon .sina_weibo {
+    width: 26px;
+    height: 26px;
+    background-image: url(../public/img/share_icon.png);
+    position: absolute;
+    left: 23px;
+    background-position: -48px 0;
+  }
+</style>
+
+<section class="question">
+  <div class="container">
+    <div class="row">
+      <div class="news_title">
+        <p>抛丸机的使用时间我们为什么要进行控制？</p>
+      </div>
+      <div class="newsInfoWrap">
+        <span>发表时间：2020-02-25 20:52</span>
+      </div>
+      <div class="line1"></div>
+      <div class="content">
+        <ul>
+          <li>
+            随时检查钢材是否有偏差。在抛丸机未启动之前，请检查操作并停止通风。抛丸机可以同时放下，移除和清洁铸件。
+          </li>
+          <li>1）填写“转移记录”。</li>
+          <li>
+            2）在启动机器之前，确认房间内没有人，您可以准备启动并及时收紧。
+          </li>
+          <li>3）注意抛丸机运行过程中的振动和声音是否正常。</li>
+          <li>4）执行例行维护并在确认正常后启动抛丸机。</li>
+          <li>5）在爆破室工作结束时。</li>
+          <li>6）检查每个运动部件的配合，以清除分离器下部筛网上的碎屑：</li>
+          <li>
+            7）检查“转移记录”，应及时消除滑动，*后应及时更换风扇，并在工作前更换抛丸机：
+          </li>
+          <li>8）电源是否不是抛丸机操作步骤？</li>
+          <li>9）检查每个部件的润滑是否符合要求。</li>
+          <li>抛丸机正在工作。</li>
+          <li>1）始终检查钢材清洁质量。</li>
+          <li>
+            2）发生异常现象，切换工作做得很好。启动机器前发出信号；关闭喷砂机电机并在出现异常时停止。
+          </li>
+          <li>抛丸机下班后。</li>
+          <li>
+            3）检查是否有任何碎屑落入机器，如有必要，调整射弹角度和滚筒输送机速度。
+          </li>
+        </ul>
+      </div>
+      <div class="line2"></div>
+      <div class="share">
+        <span>分享到：</span>
+        <div class="icon">
+          <a class="shareIcon weixin" href="#">111</a>
+          <a class="shareIcon sina_weibo" href="#">222</a>
+          <a class="shareIcon qq_share" href="#">333</a>
+          <a class="shareIcon qq_zone" href="#">444</a>
+          <a class="shareIcon douban" href="#">555</a>
+          <a class="shareIcon baidu_tieba" href="#">666</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section>
+  <!-- Button trigger modal -->
+  <button type="button" class="btn" data-toggle="modal" data-target="#myModal">
+    test
+  </button>
+
+  <!-- Modal -->
+  <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+              aria-hidden="true">&times;</span></button>
+          <h4 class="modal-title" id="myModalLabel">微信分享</h4>
+        </div>
+        <div class="modal-body">
+          <img src="../public/img/share_qrCode.png" alt="">
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Save changes</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+{{/block}}
+
+{{block "script"}}
+{{/block}}
