@@ -1,5 +1,6 @@
 {{extend './layout/layout.html'}}
 {{block "head"}}
+<title>抛丸机的使用时间我们为什么要进行控制？</title>
 <style>
   * {
     padding: 0;
@@ -12,16 +13,6 @@
   }
 </style>
 
-{{/block}}
-
-{{block "content"}}
-<section class="banner">
-  <div class="container-fluid" style="padding: 0;">
-    <div class="project_banner">
-      <img src="../public/img/product_news_1_bg.jpg" alt="">
-    </div>
-  </div>
-</section>
 <style>
   .question {
     margin: 50px 0;
@@ -71,42 +62,83 @@
 
   .share span {
     position: absolute;
-    right: 200px;
+    right: 300px;
+    line-height: 33px;
   }
 
   .share .icon {
     position: absolute;
     right: 0px;
-    height: 23px;
+  }
 
+  .share .icon .shareIcon {
+    width: 33px;
+    height: 33px;
+    margin: 0 0 12px 12px;
+    display: inline-block;
   }
 
   .share .icon .weixin {
-    width: 26px;
-    height: 26px;
-    background-image: url(../public/img/share_icon.png);
-    position: absolute;
-    background-position: -23px 0;
+    background: url(../public/img/icon_all.png) -1302px -100px no-repeat;
   }
 
   .share .icon .sina_weibo {
-    width: 26px;
-    height: 26px;
-    background-image: url(../public/img/share_icon.png);
-    position: absolute;
-    left: 23px;
-    background-position: -48px 0;
+    background: url(../public/img/icon_all.png) -1302px -190px no-repeat;
   }
 
-  .share .icon .sina_weibo {
-    width: 26px;
-    height: 26px;
-    background-image: url(../public/img/share_icon.png);
-    position: absolute;
-    left: 23px;
-    background-position: -48px 0;
+  .share .icon .qq_share {
+    background: url(../public/img/icon_all.png) -1302px -145px no-repeat;
+  }
+
+  .share .icon .qq_zone {
+    background: url(../public/img/icon_all.png) -1302px -235px no-repeat;
+  }
+
+  .share .icon .douban {
+    background: url(../public/img/icon_all.png) -1302px -730px no-repeat;
+  }
+
+  .share .icon .baidu_tieba {
+    background: url(../public/img/icon_all.png) -1302px -595px no-repeat;
   }
 </style>
+
+<!-- 分享 模态框 -->
+<style>
+  .modal-body {
+    width: 380px;
+    margin: 0 auto;
+    padding-top: 45px;
+  }
+
+  .modal-body p {
+    text-align: center;
+  }
+
+  .modal-body .wxShareImg {
+    width: 190px;
+    height: 190px;
+    margin: 50px auto;
+  }
+
+  @media (max-width: 767px) {
+    .modal-body {
+      width: 100%;
+      margin: 0 auto;
+      padding-top: 45px;
+    }
+  }
+</style>
+{{/block}}
+
+{{block "content"}}
+<section class="banner">
+  <div class="container-fluid" style="padding: 0;">
+    <div class="project_banner">
+      <img src="../public/img/product_news_1_bg.jpg" alt="">
+    </div>
+  </div>
+</section>
 
 <section class="question">
   <div class="container">
@@ -151,26 +183,16 @@
       <div class="share">
         <span>分享到：</span>
         <div class="icon">
-          <a class="shareIcon weixin" href="#">111</a>
-          <a class="shareIcon sina_weibo" href="#">222</a>
-          <a class="shareIcon qq_share" href="#">333</a>
-          <a class="shareIcon qq_zone" href="#">444</a>
-          <a class="shareIcon douban" href="#">555</a>
-          <a class="shareIcon baidu_tieba" href="#">666</a>
+          <a class="shareIcon weixin" href="#" data-toggle="modal" data-target="#myModal"></a>
+          <a class="shareIcon sina_weibo" href="#"></a>
+          <a class="shareIcon qq_share" href="#"></a>
+          <a class="shareIcon qq_zone" href="#"></a>
+          <a class="shareIcon douban" href="#"></a>
+          <a class="shareIcon baidu_tieba" href="#"></a>
         </div>
       </div>
-
     </div>
   </div>
-</section>
-
-<section>
-  <!-- Button trigger modal -->
-  <button type="button" class="btn" data-toggle="modal" data-target="#myModal">
-    test
-  </button>
-
-  <!-- Modal -->
   <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
     <div class="modal-dialog" role="document">
       <div class="modal-content">
@@ -180,18 +202,17 @@
           <h4 class="modal-title" id="myModalLabel">微信分享</h4>
         </div>
         <div class="modal-body">
-          <img src="../public/img/share_qrCode.png" alt="">
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-          <button type="button" class="btn btn-primary">Save changes</button>
+          <div>
+            <p>打开微信“扫一扫”，打开网页后点击屏幕右上角分享按钮</p>
+          </div>
+          <div class="wxShareImg">
+            <img src="../public/img/share_wechat_code.png" alt="">
+          </div>
         </div>
       </div>
     </div>
   </div>
 </section>
-
-
 {{/block}}
 
 {{block "script"}}
