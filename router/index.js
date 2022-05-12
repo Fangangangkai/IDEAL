@@ -24,8 +24,4 @@ router.get("/connection", (req, res) => {
 router.get("/product_news_1", (req, res) => {
     res.render("product_news_1.html")
 })
-
-router.get("/test", (req, res) => {
-    res.render("test.html")
-})
 module.exports = router;

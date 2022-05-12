@@ -183,12 +183,19 @@
       <div class="share">
         <span>分享到：</span>
         <div class="icon">
-          <a class="shareIcon weixin" href="#" data-toggle="modal" data-target="#myModal"></a>
-          <a class="shareIcon sina_weibo" href="#"></a>
-          <a class="shareIcon qq_share" href="#"></a>
-          <a class="shareIcon qq_zone" href="#"></a>
-          <a class="shareIcon douban" href="#"></a>
-          <a class="shareIcon baidu_tieba" href="#"></a>
+          <a class="shareIcon weixin" href="#" data-toggle="modal" data-target="#myModal" data-toggle="tooltip"
+            title="分享到 微信"></a>
+          <a class="shareIcon sina_weibo"
+            href="https://service.weibo.com/share/share.php?title=%E3%80%90%E6%8A%9B%E4%B8%B8%E6%9C%BA%E7%9A%84%E4%BD%BF%E7%94%A8%E6%97%B6%E9%97%B4%E6%88%91%E4%BB%AC%E4%B8%BA%E4%BB%80%E4%B9%88%E8%A6%81%E8%BF%9B%E8%A1%8C%E6%8E%A7%E5%88%B6%EF%BC%9F+-+%E6%97%A0%E9%94%A1%E8%89%BE%E8%BF%AA%E5%B0%94%E6%9C%BA%E6%A2%B0%E5%88%B6%E9%80%A0%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%E3%80%91"
+            title="分享到 新浪微博" target="_blank"></a>
+          <a class="shareIcon qq_share" href="https://connect.qq.com/" title="分享到 QQ分享" target="_blank"></a>
+          <a class="shareIcon qq_zone"
+            href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?summary=http%3A%2F%2Fwww.idealwx.com%2F%2Fnd.jsp%3F_sc%3D2%26id%3D3&url=http%3A%2F%2Fwww.idealwx.com%2F%2Fnd.jsp%3F_sc%3D2%26id%3D3&pics=http%3A//20186121.s21i.faiusr.com/2/ABUIABACGAAg75CM8AUo4MKmvQYw7QI43AE.jpg&title=%E3%80%90%E6%8A%9B%E4%B8%B8%E6%9C%BA%E7%9A%84%E4%BD%BF%E7%94%A8%E6%97%B6%E9%97%B4%E6%88%91%E4%BB%AC%E4%B8%BA%E4%BB%80%E4%B9%88%E8%A6%81%E8%BF%9B%E8%A1%8C%E6%8E%A7%E5%88%B6%EF%BC%9F+-+%E6%97%A0%E9%94%A1%E8%89%BE%E8%BF%AA%E5%B0%94%E6%9C%BA%E6%A2%B0%E5%88%B6%E9%80%A0%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%E3%80%91"
+            title="分享到 QQ空间" target="_blank"></a>
+          <a class="shareIcon douban" href="https://accounts.douban.com/" title="分享到 豆瓣" target="_blank"></a>
+          <a class="shareIcon baidu_tieba"
+            href="http://tieba.baidu.com/f/commit/share/openShareApi?url=&comment=&pic=http%3A//20186121.s21i.faiusr.com/2/ABUIABACGAAg75CM8AUo4MKmvQYw7QI43AE.jpg&url=http%3A%2F%2Fwww.idealwx.com%2F%2FshareUrl.jsp%3F_sc%3D2%26id%3D3%26urlRdKey%3Dnd&title=%E3%80%90%E6%8A%9B%E4%B8%B8%E6%9C%BA%E7%9A%84%E4%BD%BF%E7%94%A8%E6%97%B6%E9%97%B4%E6%88%91%E4%BB%AC%E4%B8%BA%E4%BB%80%E4%B9%88%E8%A6%81%E8%BF%9B%E8%A1%8C%E6%8E%A7%E5%88%B6%EF%BC%9F+-+%E6%97%A0%E9%94%A1%E8%89%BE%E8%BF%AA%E5%B0%94%E6%9C%BA%E6%A2%B0%E5%88%B6%E9%80%A0%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%E3%80%91http%3A%2F%2Fwww.idealwx.com%2F%2FshareUrl.jsp%3F_sc%3D2%26id%3D3%26urlRdKey%3Dnd"
+            title="分享到 百度贴吧" target="_blank"></a>
         </div>
       </div>
     </div>
@@ -213,7 +220,13 @@
     </div>
   </div>
 </section>
+
 {{/block}}
 
 {{block "script"}}
+<script>
+  $(function () {
+    $('[data-toggle="tooltip"]').tooltip()
+  })
+</script>
 {{/block}}
