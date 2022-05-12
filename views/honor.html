@@ -3,18 +3,19 @@
 {{block "head"}}
 <title>资质荣誉</title>
 <style>
-    /* img {
+    img {
         width: 100%;
         height: 100%;
-    } */
-    .honor_banner {
+    }
+
+    /* .honor_banner {
         width: 100%;
         height: 300px;
         background-image: url(public/img/honor_banner.jpg);
         background-size: cover;
         background-position: 50% 50%;
         background-repeat: no-repeat;
-    }
+    } */
 
     .honor .honor_title {
         margin: 50px 0;
@@ -123,6 +124,23 @@
         margin-bottom: 50px;
     }
 
+    .honor .honor_img .threetabs {
+        width: 100%;
+        border-bottom: 1px solid rgb(30, 80, 170);
+    }
+
+    .honor .honor_img ul {
+        text-align: center;
+        width: 300px;
+        text-align: center;
+        border: 0;
+    }
+
+    .honor .honor_img li {
+        text-align: center;
+        width: 100px;
+    }
+
     .honor .honor_img .tab-content {
         height: 710px;
     }
@@ -149,7 +167,7 @@
 <section class="banner">
     <div class="container-fluid" style="padding: 0;">
         <div class="honor_banner">
-            <!-- <img src="/public/img/honor_banner.jpg" alt=""> -->
+            <img src="/public/img/honor_banner.jpg" alt="">
         </div>
     </div>
 </section>
@@ -159,19 +177,19 @@
             <p>全系列产品符合您的需求</p>
         </div>
         <div class="honor_img">
-            <!-- <div class="navtabsparents"> -->
-            <ul class="nav nav-tabs title">
-                <li>
-                    <a href="#证书" data-toggle="tab">证书</a>
-                </li>
-                <li>
-                    <a href="#企业荣誉" data-toggle="tab">企业荣誉</a>
-                </li>
-                <li>
-                    <a href="#质量证书" data-toggle="tab">质量证书</a>
-                </li>
-            </ul>
-            <!-- </div> -->
+            <div class="threetabs">
+                <ul class="nav nav-tabs title">
+                    <li>
+                        <a href="#证书" data-toggle="tab">证书</a>
+                    </li>
+                    <li>
+                        <a href="#企业荣誉" data-toggle="tab">企业荣誉</a>
+                    </li>
+                    <li>
+                        <a href="#质量证书" data-toggle="tab">质量证书</a>
+                    </li>
+                </ul>
+            </div>
             <div class="tab-content">
                 <div class="tab-pane active contentlist" id="证书">
                     <div class="row">

@@ -283,8 +283,8 @@
                 </button>
             </div>
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav">
-                    <li class="active"><a href="/index">首页</a></li>
+                <ul class="nav navbar-nav mynav">
+                    <li><a href="/index">首页</a></li>
                     <li><a href="/introduction">关于我们</a></li>
                     <li><a href="/product">产品中心</a></li>
                     <li><a href="/news">新闻资讯</a></li>
@@ -297,6 +297,15 @@
     </nav>
 </div>
 
+<!-- <script>
+    var url = window.location.href;
+    var urlArr = url.split('?');
+    var appU = urlArr[0].split('/');
+    console.log(url);
+    console.log(appU); 
+    console.log(appU[3]);
+</script> -->
+
 <!-- 回到顶部 -->
 <div class="to-top" id="totop">
     <img src="../../public/img/head_totop.png" alt="">
@@ -307,7 +316,7 @@
     window.onscroll = function () {
         oDiv.style.display = 'block';
         var height = document.documentElement.scrollTop || document.body.scrollTop;
-        console.log(height);
+        // console.log(height);
         if (height == 0) {
             oDiv.style.display = 'none';
         }

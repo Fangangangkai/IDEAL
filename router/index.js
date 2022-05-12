@@ -1,8 +1,9 @@
 const express = require("express");
-// const path = require("path")
+const Message = require("../model/message");
+const path = require("path");
 // const multer = require('multer');
 const mongoose = require("mongoose");
-// const moment = require("moment")
+const moment = require("moment");
 const router = express.Router();
 
 router.get("/index", (req, res) => {
@@ -23,5 +24,24 @@ router.get("/connection", (req, res) => {
 
 router.get("/product_news_1", (req, res) => {
     res.render("product_news_1.html")
+})
+
+router.get("/message", async (req, res) => {
+    // 通过model里的message表查找
+    let data = await Message.find();
+    console.log(data);
+    // data = data.map(item => {
+    //     item.created_time = moment(item.created_time).format("YYYY-MM-DD HH:mm:ss");
+    //     return item;
+    // })
+    res.render("message.html", { mess: data });
+})
+
+router.post("/message", async (req, res) => {
+    // console.log(req.body, 'mmmmm');
+    // const { name, email, phone } = req.body;
+    var message = new Message(req.body);
+    await message.save();
+    res.redirect('/message')
 })
 module.exports = router;

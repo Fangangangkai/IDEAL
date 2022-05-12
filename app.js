@@ -8,12 +8,12 @@ const mongoose = require("mongoose")
 const expressSession = require("express-session")
 const app = express();
 
-// mongoose.connect("mongodb://localhost/project")
-// const db = mongoose.connection;
-// db.on('error', console.error.bind(console, 'connection error:'));
-// db.once('open', function () {
-//     console.log("已经连接数据库");
-// });
+mongoose.connect("mongodb://localhost/project")
+const db = mongoose.connection;
+db.on('error', console.error.bind(console, 'connection error:'));
+db.once('open', function () {
+    console.log("已经连接数据库");
+});
 
 app.use("/node_modules", express.static(path.join(__dirname, "node_modules")))
 app.use("/public", express.static(path.join(__dirname, "public")))
